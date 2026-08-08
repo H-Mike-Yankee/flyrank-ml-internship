@@ -73,15 +73,19 @@
 
   <!-- 1. Title + Abstract (written last, placed first) -->
   <section class="abstract" aria-label="Abstract">
-    <p class="lede"><strong>Abstract.</strong> A content team can only refresh a small number of
-    pages per week, and needs to know which ones — among thousands of existing items — are most
-    likely to be quietly declining. This paper ranks 30,000 pseudonymous content items from the
+    <p class="lede"><strong>Abstract.</strong> FlyRank works with large-scale search and content
+    performance data, and the content-refresh lane asks a prioritization question: among thousands
+    of existing pages, which few deserve a human reviewer's attention first? A content team can only
+    refresh a small number of pages per week, and needs to know which items are most likely to be
+    quietly declining. This paper ranks 30,000 pseudonymous content items from the
     starter dataset by a logistic model's probability of the item's observed 30-day trend being
     "<em>down</em>," and compares that model against a transparent three-rule baseline on identical
     client-grouped folds. Under a client-grouped five-fold out-of-fold evaluation the logistic model
     reaches AUC 0.63 vs. 0.56 for the baseline, with model Precision@50 ≈ 0.71 vs a 0.54 base rate
     (means over the folds). The result is a ranked queue — a decision-support ordering for a human
-    reviewer, reason code and action on every row — not an automatic publishing system; the
+    reviewer, reason code and action on every row — not a system that edits, publishes, deletes, or
+    otherwise changes content on its own, and not a causal experiment; refreshing content is never
+    claimed here to cause a ranking or traffic recovery. The
     priority thresholds remain explicitly provisional.</p>
   </section>
 
@@ -96,9 +100,13 @@
     waits.</p>
     <p>Data and statistics help here specifically because the task is about <em>ordering under
     scale</em> — decide which few items deserve attention first — and because the ordering can be
-    validated with the same discipline as the label itself. The rest of this paper states the data,
-    the method, the measured results, the limits, and the ranked actions an editor can take
-    tomorrow.</p>
+    validated with the same discipline as the label itself. The work is <strong>decision
+    support</strong> for that reviewer: the model ranks and the playbook maps a reason code to a
+    proposed, human-reviewed action. It is not an autonomous system — it does not edit, publish,
+    delete, or redirect content — and it is an observational analysis of one snapshot, not a causal
+    experiment. Nothing here claims that refreshing a page improves its future rankings or traffic.
+    The rest of this paper states the data, the method, the measured results, the limits, and the
+    ranked actions an editor can take tomorrow.</p>
   </section>
 
   <!-- 3. Data -->
