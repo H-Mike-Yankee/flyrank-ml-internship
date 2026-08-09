@@ -774,10 +774,9 @@
     // flow steps cascade 3D
     anime({
       targets:'.flow .step',
-      opacity:[0,1], translateY:[26,0], rotateX:[-18,0], duration:640, delay:anime.stagger(140, {start:350}),
+      opacity:[0,1], translateY:[26,0], rotateX:[-18,0], duration:640, delay:anime.stagger(110, {start:350}),
       easing:'easeOutCubic'
     });
-    anime({targets:'.hero', backgroundGradient:'linear-gradient(135deg,#1B3A4B 0%,#1d4a64 60%,#16455c 100%)'})
   } else {
     rev.forEach(el => el.classList.add('in'));
   }
